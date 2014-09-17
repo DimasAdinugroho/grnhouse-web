@@ -1,0 +1,19 @@
+https://blog.safaribooksonline.com/2013/07/02/web-applications-with-yeoman/
+
+
+yo angular:controller dashboard
+	create app/scripts/controllers/dashboard.js
+   	create test/spec/controllers/dashboard.js
+
+yo angular:view dashboard
+	create app/views/dashboard.html
+
+yo angular:route dashboard
+invoke   angular:controller:/usr/lib/node_modules/generator-angular/route/index.js 
+identical     app/scripts/controllers/dashboard.js(sama kayak controller)
+identical     test/spec/controllers/dashboard.js(sama kayak controller)
+invoke   angular:view:/usr/lib/node_modules/generator-angular/route/index.js
+identical     app/views/dashboard.html (sama kayak view)
+
+
+

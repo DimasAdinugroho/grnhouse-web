@@ -1,0 +1,58 @@
+<div id="wrapper">
+
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Green House Condition</h1>
+      </div>
+      <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.widget-row -->
+    <div class="row">
+      <div class="col-lg-12 col-md-6">
+        <div class="panel panel-skyyellow">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-3">
+                <i class="fa fa-sun-o fa-4x"></i>
+              </div>
+              <div class="col-xs-5 text-left">
+                <div class="huge">{{ widgetval.ecbreach }}</div>
+                <div>{{ widgetval.ecbreachdesc }}</div>
+              </div>
+              <div class="col-xs-4 text-right">
+                <div class="huge">{{ widgetval.avgec }}</div>
+                <div>Avg. Lux</div>
+              </div>              
+            </div>
+          </div>
+          <a href="#">
+            <div class="panel-footer">
+              <div class="clearfix"></div>
+            </div>
+          </a>
+        </div>
+      </div>      
+    </div><!-- /.widget-row -->
+    <!-- /.environmental-graph-row -->
+    <div class="row">
+      <!-- /.environmental-graph-col -->
+      <div class="col-lg-12 col-md-12 connectedSortable">
+        <!-- environmental-graph-panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <i class="fa fa-bar-chart-o fa-fw"></i> GHGraph -  Illuminance             
+          </div><!-- /.panel-header -->
+          <div class="panel-body no-padding">
+            <div class="row">
+              <div class="col-lg-12 col-md-12">
+                 <nvd3-line-chart data="exampleData" showXAxis="true" showYAxis="true" tooltips="true" interactive="true" height="300" id="illuminancegraph" showLegend="true" yAxisLabel="lx" xAxisLabel="Date">               
+                </nvd3-line-chart>
+              </div><!-- /.graph-sel-col -->              
+            </div><!-- /.graph-row -->
+          </div><!-- /.panel-body -->
+        </div><!-- /.panel-environmental-graph -->
+      </div><!-- /.col-environmental-graph -->
+    </div> <!-- /.row-environmental-graph -->  
+  </div><!-- /#page-wrapper -->
+</div><!-- /#wrapper -->
