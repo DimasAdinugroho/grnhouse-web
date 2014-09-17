@@ -1,0 +1,150 @@
+        <ion-view title="Green House - RPM">
+          <ion-nav-buttons side="left">
+            <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>              
+          </ion-nav-buttons>              
+          <ion-content class="has-header">                  
+              <div class="row responsive-sm">
+                <div class="col">            
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row-boot">
+                                <div class="col-xs-2">
+                                    <i class="fa fa-fire fa-4x"></i>
+                                </div>
+                                <div class="col-xs-10 text-right">
+                                    <div class="huge">Good</div>
+                                    <div>Temperature & Humidity</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#/app/media-ht">
+                            <div class="panel-footer">
+                                <span class="pull-left">Details in Media</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>            
+                    </div>
+                </div>    
+                <div class="col">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row-boot">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tint fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{ widgetval.ecphmedia }}</div>
+                                    <div>{{ widgetval.ecphmediadesc }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#/app/media-ecph">
+                            <div class="panel-footer">
+                                <span class="pull-left">{{ widgetval.ecphmediadet }}</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>            
+                <div class="col">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row-boot">
+                                <div class="col-xs-2">
+                                    <i class="fa fa-fire fa-4x"></i>
+                                </div>
+                                <div class="col-xs-10 text-right">
+                                    <div class="huge">{{ widgetval.tempgh }}</div>
+                                    <div>{{ widgetval.tempghdesc }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#/app/gh-ht">
+                            <div class="panel-footer">
+                                <span class="pull-left">{{ widgetval.tempghdet }}</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row-boot">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-support fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{ widgetval.luxgh }}</div>
+                                    <div>{{ widgetval.luxghdesc }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#/app/gh-lux">
+                  
+                            <div class="panel-footer">
+                                <span class="pull-left">{{ widgetval.luxghdet }}</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+              </div>      
+              <div class="row responsive-sm">
+              <!-- /.environmental-graph-col -->          
+                <div class="col">
+                <!-- environmental-graph-panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Media Graph
+                        </div><!-- /.panel-header -->
+                        <div class="panel-body no-padding">
+                            <div class="row-boot">                        
+                                    <nvd3-stacked-area-chart data="MediaData" id="MediaGraph" showXAxis="true" showYAxis="true" showLegend="true">
+                                        <svg></svg>
+                                </nvd3-stacked-area-chart>
+                            </div><!-- /.graph-row -->
+                        </div><!-- /.panel-body -->
+                    </div><!-- /.panel-environmental-graph -->
+                </div><!-- /.col-environmental-graph -->                    
+            </div> <!-- /.row-environmental-graph -->        
+            <div class="row responsive-sm">
+              <!-- /.environmental-graph-col -->
+                <div class="col">
+                <!-- environmental-graph-panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Green House Graph
+                        </div><!-- /.panel-header -->
+                        <div class="panel-body no-padding">
+                            <div class="row-boot">                            
+                                <nvd3-stacked-area-chart data="GHData" id="GHGraph" showXAxis="true" showYAxis="true" showLegend="true">
+                                    <svg></svg>
+                                </nvd3-stacked-area-chart>
+                            </div><!-- /.graph-sel-col -->              
+                        </div><!-- /.graph-row -->
+                    </div><!-- /.panel-body -->
+                </div><!-- /.panel-environmental-graph -->
+            </div><!-- /.col-environmental-graph -->                                
+          </ion-content>
+            <div class="tabs-striped  tabs-icon-top tabs-background-positive tabs-light">
+                <div class="tabs">
+                    <a class="tab-item active" href="#/app/">
+                        <i class="icon ion-ios7-speedometer-outline"></i>
+                        Dashboard
+                    </a>
+                    <a class="tab-item" href="#/app/alert">
+                        <i class="icon ion-person"></i>
+                        Notification
+                    </a>             
+                    <a class="tab-item" href="#/app/playlist">
+                        <i class="icon ion-gear-a"></i>
+                        Settings
+                    </a>                    
+                </div>
+            </div>    
+        </ion-view>                

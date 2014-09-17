@@ -1,0 +1,92 @@
+<!--
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>    
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-stable">
+      <h1 class="title">Menu</h1>
+    </header>
+    <ion-content class="has-header">
+    <div class="list">    
+      <ion-list>
+        <ion-item nav-clear menu-close ng-click="login()">          
+            <a class="item item-icon-left">
+                <i class="icon ion-ios7-speedometer-outline"></i>
+                Dashboard
+            </a>    
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/search">          
+            <a class="item item-icon-left">
+                <i class="icon ion-flame"></i>
+                GH - Humidity and Temperature
+            </a>
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/browse">          
+            <a class="item item-icon-left">
+                <i class="icon ion-gear-a"></i>
+                GH - Illuminance
+            </a>
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/playlists">          
+            <a class="item item-icon-left">
+                <i class="icon ion-flame"></i>
+                Media - Humidity and Temperature
+            </a>    
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/playlists">          
+            <a class="item item-icon-left">
+                <i class="icon ion-waterdrop"></i>
+                Media - EC and PH
+            </a>    
+        </ion-item>         
+      </ion-list>
+    </div>
+    </ion-content>
+  </ion-side-menu>  
+</ion-side-menus>
+-->
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>    
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-stable">
+      <h1 class="title">Menu</h1>
+    </header>
+    <ion-content class="has-header">
+    <div class="list">                  
+        <a class="item item-icon-left" href="#/app/playlists">
+            <i class="icon ion-ios7-speedometer-outline"></i>
+                Dashboard
+        </a>    
+        <a class="item item-icon-left" href="#/app/gh-ht">
+            <i class="icon ion-flame"></i>
+                GH - Humidity and Temperature
+        </a>
+        <a class="item item-icon-left" href="#/app/gh-lux">
+            <i class="icon ion-gear-a"></i>
+                GH - Illuminance
+        </a>    
+        <a class="item item-icon-left" href="#/app/media-ht">
+            <i class="icon ion-flame"></i>
+                Media - Humidity and Temperature
+        </a>            
+        <a class="item item-icon-left" href="#/app/media-ecph">
+            <i class="icon ion-waterdrop"></i>
+                Media - EC and PH
+        </a>                    
+    </div>
+    </ion-content>
+  </ion-side-menu>  
+</ion-side-menus>

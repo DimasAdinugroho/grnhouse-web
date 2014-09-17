@@ -1,0 +1,130 @@
+<ion-view title="Media-HT">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <div class="row responsive-sm">
+      <div class="col">
+        <h1 class="page-header">Media Condition</h1>
+      </div>
+      <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.widget-row -->
+    <div class="row responsive-sm">
+      <div class="col">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <div class="row-boot">
+              <div class="col-xs-2">
+                <i class="fa fa-fire fa-4x"></i>
+              </div>
+              <div class="col-xs-5 text-left">
+                <div class="huge">{{ widgetval.tempbreach }}</div>
+                <div>{{ widgetval.tempbreachdesc }}</div>
+              </div>
+              <div class="col-xs-5 text-right">
+                <div class="huge">{{ widgetval.avgtemp }}</div>
+                <div>Avg. temperature</div>
+              </div>              
+            </div>
+          </div>
+          <a href="#">
+            <div class="panel-footer">
+              <div class="clearfix"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="panel panel-green">
+          <div class="panel-heading">
+            <div class="row-boot">
+              <div class="col-xs-2">
+                <i class="fa fa-tint fa-4x"></i>
+              </div>
+              <div class="col-xs-5 text-left">
+                <div class="huge">{{ widgetval.humbreach }}</div>
+                <div>{{ widgetval.humbreachdesc }}</div>
+              </div>
+              <div class="col-xs-5 text-right">
+                <div class="huge">{{ widgetval.avghum }}</div>
+                <div>Avg. humidity</div>
+              </div>
+            </div>
+          </div>
+          <a href="#">
+            <div class="panel-footer">
+              <div class="clearfix"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div> <!-- /.widget-row -->
+    <div class="row responsive-sm" >
+      <!-- /.power-col -->
+        <div class="col">
+        <!-- power graph -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                <i class="fa fa-bar-chart-o fa-fw"></i> Mediagraph - Average Temperature
+                </div><!-- /.panel-header -->
+                <div class="panel-body no-padding" style="text-align:center">
+                    <nvd3-line-chart data="MediaDataTemp" id="MediaGraphTemp" tooltips="true" showXAxis="true" showYAxis="true" interactive="true" showLegend="true" yAxisLabel="C" xAxisLabel="Date">
+                        <svg></svg>
+                    </nvd3-line-chart>
+                </div><!-- /.panel-body -->
+            </div><!-- /.panel-power -->
+        </div><!-- /.col-power -->
+        <!-- /.env-graph-col -->
+    </div>    
+    <div class="row responsive-sm">    
+        <div class="col"><!-- env-graph -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                <i class="fa fa-bar-chart-o fa-fw"></i> Mediagraph - Average Humidity                    
+                </div><!-- /.panel-header -->
+                <div class="panel-body no-padding" style="text-align:center">
+                    <nvd3-line-chart data="MediaDataHum" id="MediaGraphHum" tooltips="true" showXAxis="true" showYAxis="true" interactive="true" showLegend="true" yAxisLabel="%" xAxisLabel="Date">
+                        <svg></svg>
+                    </nvd3-line-chart>
+                </div><!-- /.panel-body -->
+            </div><!-- /.panel-env-graph -->
+        </div><!-- /.col-env-graph -->
+      </div> <!-- /.row-Pwr -->          
+      <div class="row responsive-sm">
+        <div class="col">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Control Threshold
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col">
+                            <form role="form">
+                                <div class="list">
+                                    <label>Temperature Threshold</label><br/>                                            
+                                    <label class="item item-input">
+                                        <input type="text" placeholder="Temperature">
+                                    </label>                                    
+                                </div>      
+                                <button type="button" class="button button-positive">Change</button>
+                            </form>                                        
+                        </div><!-- /.col-lg-6 (nested) -->
+                        <div class="col">                                                                        
+                            <form role="form">                                        
+                                <div class="list">
+                                    <label>Humidity Threshold</label><br/>
+                                    <label class="item item-input">
+                                        <input type="text" placeholder="Humidity">
+                                    </label>                                   
+                                </div>      
+                                <button type="button" class="button button-positive">Change</button>
+                            </form>                                                  
+                        </div><!-- /.col-lg-6 (nested) -->
+                    </div><!-- /.row (nested) -->
+                </div><!-- /.panel-body -->
+            </div><!-- /.panel -->
+        </div><!-- /.col-lg-12 -->
+    </div>
+  </ion-content>
+</ion-view>

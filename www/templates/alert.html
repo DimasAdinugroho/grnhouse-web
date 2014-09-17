@@ -1,0 +1,126 @@
+<ion-view title="Notification">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">    
+    <div class="row responsive-sm">
+      <div class="col">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-3">
+                <i class="fa fa-list-alt fa-4x"></i>
+              </div>
+              <div class="col-xs-5 text-right">
+                <div class="huge">{{ widgetval.faults }}</div>
+                <div>Faults</div>
+              </div>              
+              <div class="col-xs-4 text-right">
+                <div class="huge">{{ widgetval.warnings }}</div>
+                <div>Warnings</div>
+              </div>
+            </div>
+          </div>
+          <a href="#">
+            <div class="panel-footer">
+              <div class="clearfix">Current Threats</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="panel panel-yellow">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-3">
+                <i class="fa fa-calendar-o fa-4x"></i>
+              </div>
+              <div class="col-xs-5 text-right">
+                <div class="huge">{{ widgetval.tweek }}</div>
+                <div>This Week</div>
+              </div>
+              <div class="col-xs-4 text-right">
+                <div class="huge">{{ widgetval.tmonth }}</div>
+                <div>This Month</div>
+              </div>
+            </div>
+          </div>
+          <a href="#">
+            <div class="panel-footer">
+              <div class="clearfix">Total Notification</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="panel panel-green">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-3">
+                <i class="fa fa-steam fa-4x"></i>
+              </div>
+              <div class="col-xs-5 text-right">
+                <div class="huge">{{ widgetval.aweek }}</div>
+                <div>Weekly</div>
+              </div>
+              <div class="col-xs-5 text-right">
+                <div class="huge">{{ widgetval.amonth }}</div>
+                <div>Monthly</div>
+              </div>
+            </div>
+          </div>
+          <a href="#">
+            <div class="panel-footer">
+              <div class="clearfix">Averages</div>
+            </div>
+          </a>
+        </div>
+      </div>        
+    </div>   
+    <div class="row">
+      <!-- /.task list-col -->
+      <div class="col">
+        <!-- task list -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <i class="fa fa-bar-chart-o fa-fw"></i> Notification timeline
+          </div><!-- /.panel-header -->
+          <div class="panel-body">
+            <ul class="timeline">
+              <li ng-repeat="alert in alerts" ng-class="{right:'timeline-inverted', left:''}[alert.pos]">
+                <div class="timeline-badge" ng-class="{warn:'warning', fault:'danger'}[alert.type]">
+                  <i ng-class="{warn:'fa fa-exclamation', fault:'fa fa-times'}[alert.type]"></i>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">{{alert.desc}}</h4>
+                    <p><small class="text-muted"><i class="fa fa-clock-o"></i> {{ alert.due}}</small>
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- /.panel-body -->
+        </div><!-- /.panel-task list -->
+      </div><!-- /.col-task list -->
+
+    </div> <!-- /.row-task -->  
+  </ion-content>
+    <div class="tabs-striped  tabs-icon-top tabs-background-positive tabs-light">
+        <div class="tabs">
+            <a class="tab-item" href="#/app/">
+                <i class="icon ion-ios7-speedometer-outline"></i>
+                Dashboard
+            </a>
+            <a class="tab-item active" href="#/app/alert">
+                <i class="icon ion-person"></i>
+                Notification
+            </a>             
+            <a class="tab-item" href="#/app/playlist">
+                <i class="icon ion-gear-a"></i>
+                Settings
+            </a>                    
+        </div>
+    </div>        
+</ion-view>
